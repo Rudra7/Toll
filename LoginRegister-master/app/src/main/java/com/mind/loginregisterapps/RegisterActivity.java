@@ -52,12 +52,17 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home :
-                onBackPressed();
-                return true;
+    public void onBackPressed() {
+        if (!shouldAllowBack()) {
+            doSomething();
+        } else {
+            super.onBackPressed();
         }
-        return super.onOptionsItemSelected(item);
+    }
+
+    private void doSomething() {
+    }
+    private boolean shouldAllowBack() {
+        return false;
     }
 }

@@ -18,5 +18,8 @@
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">@color/colorWhite</item>
     </style>
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance">
+        <item name="android:background">@color/colorPurple</item>
+    </style>
 
 </resources>

@@ -50,18 +50,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         passwordText=findViewById(R.id.passwordText);
         btRegister.setOnClickListener(this);
     }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    @Override
-    public void onClick(View v) {
-        if (v==btRegister){
-            Intent intent   = new Intent(MainActivity.this,RegisterActivity.class);
-            Pair[] pairs    = new Pair[1];
-            pairs[0] = new Pair<View,String>(tvLogin,"tvLogin");
-            ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,pairs);
-            startActivity(intent,activityOptions.toBundle());
-        }
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -75,5 +63,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // do something
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    public void onClick(View v) {
+        if (v==btRegister){
+            Intent intent   = new Intent(MainActivity.this,RegisterActivity.class);
+            Pair[] pairs    = new Pair[1];
+            pairs[0] = new Pair<View,String>(tvLogin,"tvLogin");
+            ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,pairs);
+            startActivity(intent,activityOptions.toBundle());
+        }
+    }
+    @Override
+    public void onBackPressed() {
+        if (!shouldAllowBack()) {
+            finishAffinity();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    private void doSomething() {
+    }
+    private boolean shouldAllowBack() {
+        return false;
     }
 }

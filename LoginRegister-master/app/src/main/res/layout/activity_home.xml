@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".homeActivity"
     tools:ignore="VectorDrawableCompat">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/bgHeader"
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:background="@drawable/header_login"
-        android:elevation="5dp" />
-
     <ImageView
         android:id="@+id/circle1"
         android:layout_width="134dp"
@@ -52,51 +44,58 @@
         android:layout_marginBottom="-50dp"
         android:layout_toLeftOf="@+id/circle3"
         android:src="@drawable/circletransparant" />
-    <ScrollView
-        android:id="@+id/sv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/bgHeader">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="75dp"
+            android:background="@drawable/header_login">
+        </RelativeLayout>
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/cv"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingBottom="50dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="Your Location"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colorPurple"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
 
-                <EditText
-                    android:id="@+id/LocationText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:inputType="text" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+
+            android:paddingBottom="50dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Enter Destination Location"
+                android:textColor="@color/colorPurple"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/LocationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="Select the Toll Gate"
-                android:layout_gravity="center"
                 android:textColor="@color/colorPurple"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -108,29 +107,31 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:inputType="text" />
-                <TextView
-                    android:id="@+id/ToPayView"
-                    android:visibility="invisible"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="To pay"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colorPurple"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-                <EditText
-                    android:id="@+id/ToPayText"
-                    android:visibility="invisible"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:inputType="text" />
 
-            </LinearLayout>
+            <TextView
+                android:id="@+id/ToPayView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="To pay"
+                android:textColor="@color/colorPurple"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
 
-            </android.support.v7.widget.CardView>
+            <EditText
+                android:id="@+id/ToPayText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:inputType="text"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -161,8 +162,6 @@
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite" />
             </RelativeLayout>
-        </RelativeLayout>
-    </ScrollView>
 
 
         </RelativeLayout>
