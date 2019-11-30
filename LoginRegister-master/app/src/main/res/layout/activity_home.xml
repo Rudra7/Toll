@@ -89,46 +89,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:inputType="text" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:text="Select the Toll Gate"
-                android:textColor="@color/colorPurple"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/TollGateText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:inputType="text" />
-
-            <TextView
-                android:id="@+id/ToPayView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:text="To pay"
-                android:textColor="@color/colorPurple"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:visibility="invisible" />
-
-            <EditText
-                android:id="@+id/ToPayText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:inputType="text"
-                android:visibility="invisible" />
-
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
@@ -150,15 +110,6 @@
                     android:background="@drawable/bg_ui"
                     android:text="Proceed"
                     android:onClick="myfunc"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorWhite" />
-                <Button
-                    android:id="@+id/PaymentButton"
-                    android:enabled="false"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_ui"
-                    android:text="Proceed to Payment"
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite" />
             </RelativeLayout>

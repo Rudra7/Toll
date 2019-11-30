@@ -19,17 +19,12 @@ import android.widget.TextView;
 
 public class homeActivity extends AppCompatActivity {
 
-    private TextView toPayView;
-    private EditText toPayText;
-    private Button paymentButton,proceedButton;
+    private Button proceedButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        toPayView=findViewById(R.id.ToPayView);
-        toPayText=findViewById(R.id.ToPayText);
-        paymentButton=findViewById(R.id.PaymentButton);
         proceedButton=findViewById(R.id.ProceedButton);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.colorPurple)));
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -69,9 +64,7 @@ public class homeActivity extends AppCompatActivity {
 
     public void myfunc(View view)
     {
-        toPayText.setVisibility(View.VISIBLE);
-        toPayView.setVisibility(View.VISIBLE);
-        paymentButton.setEnabled(true);
-        proceedButton.setEnabled(false);
+        Intent intent   = new Intent(homeActivity.this,paymentActivity.class);
+        startActivity(intent);
     }
 }
