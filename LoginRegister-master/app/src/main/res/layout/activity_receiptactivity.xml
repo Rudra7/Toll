@@ -45,11 +45,11 @@
         android:layout_toLeftOf="@+id/circle3"
         android:src="@drawable/circletransparant" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:background="@drawable/header_login">
-        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/header_login">
+    </RelativeLayout>
 
     <android.support.v7.widget.CardView
         android:id="@+id/cv"
@@ -69,57 +69,46 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:orientation="vertical"
-
+            android:background="@android:drawable/bottom_bar"
             android:paddingBottom="50dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:text="Enter Destination Location"
-                android:textColor="@color/colorPurple"
-                android:textSize="14sp"
+                android:layout_gravity="center|left"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="#12345"
+                android:textSize="40sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/LocationText"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_gravity="center|right"
+                android:layout_marginTop="-40dp"
                 android:layout_marginRight="10dp"
-                android:inputType="text" />
+                android:text="Rs.300"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="40dp"
+                android:layout_marginTop="3000dp"
+                android:text="Banglore-Hubli"
+                android:background="@android:drawable/divider_horizontal_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cv"
-                android:layout_alignLeft="@+id/cv"
-                android:layout_alignRight="@+id/cv"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="-50dp"
-                android:layout_marginRight="35dp"
-                android:elevation="10dp">
-
-                <Button
-                    android:id="@+id/ProceedButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_ui"
-                    android:text="Proceed"
-                    android:onClick="myfunc"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorWhite" />
-            </RelativeLayout>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/toll"
-        android:layout_marginTop="240dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"/>
-
-
-        </RelativeLayout>
+</RelativeLayout>

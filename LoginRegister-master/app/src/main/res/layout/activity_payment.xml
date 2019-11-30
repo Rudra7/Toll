@@ -28,6 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
         android:layout_marginBottom="200dp"
+        android:choiceMode="singleChoice"
+        android:listSelector="@color/colorPurple"
         android:textAlignment="center"/>
     <LinearLayout
         android:layout_width="match_parent"

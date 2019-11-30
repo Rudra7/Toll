@@ -44,6 +44,10 @@ public class homeActivity extends AppCompatActivity {
             Intent intent   = new Intent(homeActivity.this,MainActivity.class);
             startActivity(intent);
         }
+        else if(id==R.id.reciept){
+            Intent intent = new Intent(homeActivity.this,receiptactivity.class);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
     }
     @Override
